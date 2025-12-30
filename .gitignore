@@ -1,0 +1,102 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Data files (不上传大文件)
+/data/
+*.csv
+!output/preprocessing/*.csv
+
+# Model files (保留目录结构，但忽略大文件)
+# 注意：训练好的模型需要上传，所以不忽略 trained_models/
+*.h5
+*.hdf5
+# *.keras  # 不忽略，需要上传训练好的模型
+
+# Logs
+logs/
+*.log
+tensorboard/
+
+# Output (部分)
+output/training_logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+!docs/组员开发包.rar
+
+# Root level keras files (test files)
+/best_model.keras
+
+# Image files in data directories (保护原始数据不被上传)
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.png
+data/**/*.gif
+data/**/*.bmp
+
+# Checkpoint files
+*.ckpt
+*.ckpt.*
+
+# TensorFlow/Keras specific
+*.pb
+checkpoint
+events.out.tfevents.*
+
+# Cache directories
+.cache/
+*.cache
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/

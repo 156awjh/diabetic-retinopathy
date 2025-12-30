@@ -1,0 +1,5 @@
+# TensorFlow 神经网络库
+tensorflow>=2.10.0
+
+# 可选：测试框架
+pytest>=7.0.0

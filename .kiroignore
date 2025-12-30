@@ -1,0 +1,59 @@
+﻿# Python virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Data files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Large binary files
+*.dll
+*.so
+*.pyd
+*.exe
+*.bin
+
+# Model files
+*.pth
+*.pt
+*.h5
+*.pkl
+*.pickle
+*.model
+*.onnx
+*.pb
+*.ckpt
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Node modules
+node_modules/
+
+# Large directories
+.git/
+.pytest_cache/
+.tox/
+htmlcov/
+
+# Data directory
+data/
