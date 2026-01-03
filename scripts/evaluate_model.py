@@ -53,7 +53,10 @@ def main():
     
     # 加载测试数据
     print("加载测试数据...")
-    loader = DRDataLoader(batch_size=args.batch_size)
+    if(args.model == 'inceptionv3'):
+        loader = DRDataLoader(image_size=(299, 299),batch_size=args.batch_size)
+    else:
+        loader = DRDataLoader(batch_size=args.batch_size)
     test_data = loader.load_test_data()
     
     # 加载模型
