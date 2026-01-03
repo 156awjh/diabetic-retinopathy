@@ -92,7 +92,10 @@ def main():
     
     # 加载数据
     print("加载数据...")
-    loader = DRDataLoader(batch_size=args.batch_size)
+    if(args.model == 'inceptionv3'):
+        loader = DRDataLoader(image_size=(299, 299),batch_size=args.batch_size)
+    else:
+        loader = DRDataLoader(batch_size=args.batch_size)
     train_data = loader.load_train_data(augment=True)
     val_data = loader.load_val_data()
     
