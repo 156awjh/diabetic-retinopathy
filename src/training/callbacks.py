@@ -55,7 +55,7 @@ def get_callbacks(model_name: str,
         
         # 模型检查点
         keras.callbacks.ModelCheckpoint(
-            filepath=str(save_path / f"{model_name}_best.keras"),
+            filepath=str(save_path / f"{model_name}_best_auto.keras"),
             monitor='val_accuracy',
             save_best_only=True,
             verbose=1
