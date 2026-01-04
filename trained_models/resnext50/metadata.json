@@ -1,9 +1,0 @@
-{
-  "model_name": "resnext50",
-  "num_classes": 5,
-  "input_shape": [
-    224,
-    224,
-    3
-  ]
-}
