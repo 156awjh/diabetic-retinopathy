@@ -1,0 +1,18 @@
+{
+  "model_name": "resnext50",
+  "training_date": "2026-01-04T23:58:35.858248",
+  "epochs": 50,
+  "learning_rate": 0.001,
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "num_classes": 5,
+  "final_metrics": {
+    "train_loss": 0.36612042784690857,
+    "train_accuracy": 0.7551651000976562,
+    "val_loss": 0.49086180329322815,
+    "val_accuracy": 0.7361928224563599
+  }
+}
