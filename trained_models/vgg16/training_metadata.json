@@ -1,0 +1,18 @@
+{
+  "model_name": "vgg16",
+  "training_date": "2026-01-05T09:58:04.676793",
+  "epochs": 30,
+  "learning_rate": 0.001,
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "num_classes": 5,
+  "final_metrics": {
+    "train_loss": 1.385094165802002,
+    "train_accuracy": 0.28884008526802063,
+    "val_loss": 2.1808884143829346,
+    "val_accuracy": 0.0859745666384697
+  }
+}
