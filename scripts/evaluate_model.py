@@ -57,7 +57,7 @@ def main():
     test_data = loader.load_test_data()
     
     # 加载模型
-    model_path = Path(args.models_dir) / args.model / f"{args.model}_best.keras"
+    model_path = "/Users/evenyoung/diabetic-retinopathy/trained_models/vgg16/vgg16_best.keras"
     if not model_path.exists():
         print(f"错误: 模型文件不存在: {model_path}")
         sys.exit(1)
