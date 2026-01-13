@@ -113,8 +113,30 @@ def main():
         learning_rate=args.learning_rate,
         class_weight=class_weights
     )
-    
-    print("\n训练完成！")
+    # 在 trainer.train() 之后添加
+    from sklearn.metrics import classification_report
+    import numpy as np
+
+    val_gen.reset()
+    y_pred_prob = model.model.predict(val_gen, steps=np.ceil(val_gen.n / val_gen.batch_size))
+    y_pred = np.argmax(y_pred_prob, axis=1)
+    y_true = val_gen.labels[:len(y_pred)]
+
+    class_names = ['No DR', 'Mild', 'Moderate', 'Severe', 'Proliferative']
+
+    print("=" * 50)
+    print("每类别详细分析")
+    print("=" * 50)
+
+    report = classification_report(y_true, y_pred, target_names=class_names, output_dict=True)
+    for name in class_names:
+        m = report[name]
+        print(f"\n{name}:")
+        print(f"  精确率: {m['precision']:.4f}")
+        print(f"  召回率: {m['recall']:.4f}")
+        print(f"  F1: {m['f1-score']:.4f}")
+        print(f"  样本数: {int(m['support'])}")
+        print("\n训练完成！")
 
 
 if __name__ == '__main__':
