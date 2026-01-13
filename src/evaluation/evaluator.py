@@ -190,6 +190,9 @@ class ModelEvaluator:
         """
         cm = np.array(self.report['confusion_matrix'])
         
+        plt.rcParams['font.sans-serif'] = ['SimHei']  # 指定默认字体：黑体（SimHei）
+        plt.rcParams['axes.unicode_minus'] = False    # 解决负号（-）显示为方框的问题
+        
         plt.figure(figsize=figsize)
         sns.heatmap(
             cm, 
